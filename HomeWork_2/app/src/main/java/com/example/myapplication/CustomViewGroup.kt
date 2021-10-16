@@ -31,17 +31,28 @@ class CustomViewGroup @JvmOverloads constructor(
         measureChildWithMargins(iconView, widthMeasureSpec, 0, heightMeasureSpec, 0)
 
         totalWidth += iconView.measuredWidth + iconView.marginLeft + iconView.marginRight
-        totalHeight = max(totalHeight, iconView.measuredHeight + iconView.marginTop + iconView.marginBottom)
+        totalHeight =
+            maxOf(totalHeight, iconView.measuredHeight + iconView.marginTop + iconView.marginBottom)
 
-        measureChildWithMargins(messageView, widthMeasureSpec, 0, heightMeasureSpec, 0)
+        measureChildWithMargins(messageView, widthMeasureSpec, totalWidth, heightMeasureSpec, 0)
 
         totalWidth += messageView.measuredWidth + messageView.marginLeft + messageView.marginRight
-        totalHeight = max(totalHeight, messageView.measuredHeight + messageView.marginTop + messageView.marginBottom)
+        totalHeight =
+            maxOf(
+                totalHeight,
+                messageView.measuredHeight + messageView.marginTop + messageView.marginBottom
+            )
 
-        measureChildWithMargins(smileView, widthMeasureSpec, 0, heightMeasureSpec, 0)
+        measureChildWithMargins(
+            smileView,
+            widthMeasureSpec,
+            iconView.measuredWidth + iconView.marginLeft + iconView.marginRight,
+            heightMeasureSpec,
+            totalHeight
+        )
 
         totalWidth += smileView.measuredWidth + smileView.marginLeft + smileView.marginRight
-        totalHeight = max(totalHeight, smileView.measuredHeight + smileView.marginTop + smileView.marginBottom)
+        totalHeight += smileView.measuredHeight + smileView.marginTop + smileView.marginBottom
 
         var resultWidth = totalWidth + paddingLeft + paddingRight
         var resultHeight = totalHeight + paddingTop + paddingBottom
@@ -76,9 +87,9 @@ class CustomViewGroup @JvmOverloads constructor(
 
         smileView.layout(
             messageView.left,
-            paddingTop + messageView.measuredHeight + messageView.marginBottom + smileView.marginTop,
-            width - paddingRight - smileView.marginRight,
-            paddingTop + messageView.measuredHeight + messageView.marginBottom + smileView.marginTop + smileView.measuredHeight
+            messageView.bottom + messageView.marginBottom + smileView.marginTop,
+            messageView.left + smileView.measuredWidth,
+            messageView.bottom + messageView.marginBottom + smileView.marginTop + smileView.measuredHeight
         )
     }
 

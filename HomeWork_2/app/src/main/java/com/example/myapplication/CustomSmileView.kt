@@ -5,6 +5,7 @@ import android.content.res.TypedArray
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
+import kotlin.math.max
 
 class CustomSmileView @JvmOverloads constructor(
     context: Context,
@@ -27,7 +28,7 @@ class CustomSmileView @JvmOverloads constructor(
     private val smilePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         textAlign = Paint.Align.CENTER
         color = Color.LTGRAY
-        textSize = 45f
+        textSize = 40f
     }
 
     private val textBounds = Rect()
@@ -50,11 +51,6 @@ class CustomSmileView @JvmOverloads constructor(
         }
     }
 
-    fun setTextColor(color: Int) {
-        smilePaint.color = color
-        invalidate()
-    }
-
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val smileViewText = smileUnicode + smileCount
         smilePaint.getTextBounds(smileViewText, 0, smileViewText.length, textBounds)
@@ -65,8 +61,8 @@ class CustomSmileView @JvmOverloads constructor(
         val totalWidth = textWidth + paddingRight + paddingLeft
         val totalHeight = textHeight + paddingTop + paddingBottom
 
-        val resultWidth = Math.max(totalWidth, suggestedMinimumWidth)
-        val resultHeight = Math.max(totalHeight, suggestedMinimumHeight)
+        val resultWidth = max(totalWidth, suggestedMinimumWidth)
+        val resultHeight = max(totalHeight, suggestedMinimumHeight)
 
         setMeasuredDimension(
             resolveSizeAndState(resultWidth, widthMeasureSpec, 0),
