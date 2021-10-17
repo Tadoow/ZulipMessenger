@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="service_result_placeholder_name">Service result:</string>
+    <string name="start_activity_button_name">Start Activity</string>
+    <string name="stop_service_button_name">Stop Service</string>
+    <string name="start_service_button_name">Start Service</string>
+</resources>
