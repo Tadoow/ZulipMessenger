@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.view.customViewGroup
 
 import android.content.Context
 import android.util.AttributeSet

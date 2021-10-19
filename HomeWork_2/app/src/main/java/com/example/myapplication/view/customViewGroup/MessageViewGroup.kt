@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.view.customViewGroup
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,9 +7,10 @@ import androidx.core.view.marginBottom
 import androidx.core.view.marginLeft
 import androidx.core.view.marginRight
 import androidx.core.view.marginTop
+import com.example.myapplication.R
 import kotlin.math.max
 
-class CustomViewGroup @JvmOverloads constructor(
+class MessageViewGroup @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,

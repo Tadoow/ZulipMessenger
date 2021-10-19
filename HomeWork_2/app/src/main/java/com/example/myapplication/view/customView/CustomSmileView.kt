@@ -1,10 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.view.customView
 
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
+import com.example.myapplication.R
 import kotlin.math.max
 
 class CustomSmileView @JvmOverloads constructor(
