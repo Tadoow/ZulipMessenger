@@ -14,11 +14,10 @@ import com.example.myapplication.model.IncomeMessage
 import com.example.myapplication.model.Message
 import com.example.myapplication.model.OutcomeMessage
 import com.example.myapplication.view.adapter.EmojiAdapter
-import com.example.myapplication.view.adapter.MyAdapter
+import com.example.myapplication.view.adapter.MessageAdapter
 import com.example.myapplication.view.customView.CustomSmileView
 import com.example.myapplication.view.customViewGroup.FlexBoxLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import java.util.*
 
 class MainActivity : AppCompatActivity(), OnAddSmileViewListener {
 
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity(), OnAddSmileViewListener {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        val adapter = MyAdapter(makeMessagesList(), this)
+        val adapter = MessageAdapter(makeMessagesList(), this)
         recyclerView.adapter = adapter
 
         val sendButton = findViewById<ImageButton>(R.id.sendButton)
@@ -86,8 +85,9 @@ class MainActivity : AppCompatActivity(), OnAddSmileViewListener {
         }
     }
 
-    override fun messageViewClicked(messageTextView: TextView?) {
+    override fun messageViewClicked(messageTextView: TextView?): Boolean {
         showBottomSheetDialog()
+        return true
     }
 
     private fun showBottomSheetDialog() {

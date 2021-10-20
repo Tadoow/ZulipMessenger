@@ -6,5 +6,5 @@ import com.example.myapplication.view.customViewGroup.FlexBoxLayout
 
 interface OnAddSmileViewListener {
     fun addSmileViewClicked(customAddView: ImageView?, flexBoxLayout: FlexBoxLayout?)
-    fun messageViewClicked(messageTextView: TextView?)
+    fun messageViewClicked(messageTextView: TextView?): Boolean
 }

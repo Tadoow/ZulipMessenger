@@ -1,13 +1,11 @@
 package com.example.myapplication.view.viewholders
 
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.example.myapplication.R
 import com.example.myapplication.model.DateMessage
-import com.example.myapplication.model.IncomeMessage
 
-class DateMessageViewHolder(itemView: View) : MyViewHolder(itemView) {
+class DateMessageViewHolder(itemView: View) : MessageViewHolder(itemView) {
     private var dateMessageTextView: TextView? = null
 
     init {

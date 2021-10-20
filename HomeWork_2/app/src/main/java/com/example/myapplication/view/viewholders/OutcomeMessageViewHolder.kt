@@ -7,7 +7,7 @@ import com.example.myapplication.R
 import com.example.myapplication.model.OutcomeMessage
 import com.example.myapplication.view.customViewGroup.FlexBoxLayout
 
-class OutcomeMessageViewHolder(itemView: View) : MyViewHolder(itemView) {
+class OutcomeMessageViewHolder(itemView: View) : MessageViewHolder(itemView) {
     private var messageTextView: TextView? = null
     private var customAddView: ImageView? = null
     private var flexBoxLayout: FlexBoxLayout? = null
@@ -18,8 +18,9 @@ class OutcomeMessageViewHolder(itemView: View) : MyViewHolder(itemView) {
         flexBoxLayout = itemView.findViewById(R.id.flexBoxLayout)
     }
 
-    fun setOnClickListener(viewClickListener: View.OnClickListener?) {
-        customAddView?.setOnClickListener(viewClickListener)
+    fun setOnClickListener(addViewClickListener: View.OnClickListener?, messageClickListener: View.OnLongClickListener?) {
+        customAddView?.setOnClickListener(addViewClickListener)
+        messageTextView?.setOnLongClickListener(messageClickListener)
     }
 
     fun getFlexBoxLayout(): FlexBoxLayout? {

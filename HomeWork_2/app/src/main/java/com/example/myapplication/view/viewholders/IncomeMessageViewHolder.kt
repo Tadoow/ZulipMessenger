@@ -7,7 +7,7 @@ import com.example.myapplication.R
 import com.example.myapplication.model.IncomeMessage
 import com.example.myapplication.view.customViewGroup.FlexBoxLayout
 
-class IncomeMessageViewHolder(itemView: View) : MyViewHolder(itemView) {
+class IncomeMessageViewHolder(itemView: View) : MessageViewHolder(itemView) {
     private var senderTextView: TextView? = null
     private var senderMessageTextView: TextView? = null
     private var customAddView: ImageView? = null
@@ -20,9 +20,9 @@ class IncomeMessageViewHolder(itemView: View) : MyViewHolder(itemView) {
         flexBoxLayout = itemView.findViewById(R.id.flexBoxLayout)
     }
 
-    fun setOnClickListener(addViewClickListener: View.OnClickListener?, messageClickListener: View.OnClickListener?) {
+    fun setOnClickListener(addViewClickListener: View.OnClickListener?, messageClickListener: View.OnLongClickListener?) {
         customAddView?.setOnClickListener(addViewClickListener)
-        senderMessageTextView?.setOnClickListener(messageClickListener)
+        senderMessageTextView?.setOnLongClickListener(messageClickListener)
     }
 
     fun getFlexBoxLayout(): FlexBoxLayout? {
