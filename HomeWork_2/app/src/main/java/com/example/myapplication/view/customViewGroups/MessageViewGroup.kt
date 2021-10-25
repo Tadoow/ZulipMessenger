@@ -1,4 +1,4 @@
-package com.example.myapplication.view.customViewGroup
+package com.example.myapplication.view.customViewGroups
 
 import android.content.Context
 import android.util.AttributeSet
@@ -18,7 +18,7 @@ class MessageViewGroup @JvmOverloads constructor(
 ) : ViewGroup(context, attrs, defStyleAttr, defStyleRes) {
 
     init {
-        inflate(context, R.layout.custom_view_group_layout, this)
+        inflate(context, R.layout.message_view_group, this)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

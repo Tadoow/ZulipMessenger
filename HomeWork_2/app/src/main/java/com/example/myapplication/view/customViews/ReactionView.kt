@@ -1,4 +1,4 @@
-package com.example.myapplication.view.customView
+package com.example.myapplication.view.customViews
 
 import android.content.Context
 import android.content.res.TypedArray
@@ -8,7 +8,7 @@ import android.view.View
 import com.example.myapplication.R
 import kotlin.math.max
 
-class CustomSmileView @JvmOverloads constructor(
+class ReactionView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
@@ -20,7 +20,7 @@ class CustomSmileView @JvmOverloads constructor(
             field = value
             invalidate()
         }
-    var smileCount = ""
+    var smileCount = 0
         set(value) {
             field = value
             requestLayout()
@@ -46,7 +46,7 @@ class CustomSmileView @JvmOverloads constructor(
         try {
             smileUnicode = typedArray.getString(R.styleable.CustomSmileView_customSmileSrc)
                 ?: ""
-            smileCount = typedArray.getString(R.styleable.CustomSmileView_customSmileCount) ?: ""
+            smileCount = typedArray.getInteger(R.styleable.CustomSmileView_customSmileCount, 0)
         } finally {
             typedArray.recycle()
         }

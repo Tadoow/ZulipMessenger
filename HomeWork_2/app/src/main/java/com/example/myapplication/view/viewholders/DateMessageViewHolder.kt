@@ -3,7 +3,7 @@ package com.example.myapplication.view.viewholders
 import android.view.View
 import android.widget.TextView
 import com.example.myapplication.R
-import com.example.myapplication.model.DateMessage
+import com.example.myapplication.models.Message
 
 class DateMessageViewHolder(itemView: View) : MessageViewHolder(itemView) {
     private var dateMessageTextView: TextView? = null
@@ -12,7 +12,7 @@ class DateMessageViewHolder(itemView: View) : MessageViewHolder(itemView) {
         dateMessageTextView = itemView.findViewById(R.id.dateMessageTextView)
     }
 
-    fun setData(data: DateMessage) {
+    override fun setData(data: Message, position: Int) {
         dateMessageTextView?.text = data.toString()
     }
 }

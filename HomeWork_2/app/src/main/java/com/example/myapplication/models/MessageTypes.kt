@@ -1,4 +1,4 @@
-package com.example.myapplication.model
+package com.example.myapplication.models
 
 enum class MessageTypes {
     INCOME,
