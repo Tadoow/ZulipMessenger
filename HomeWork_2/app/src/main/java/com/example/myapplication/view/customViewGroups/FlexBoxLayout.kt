@@ -1,7 +1,8 @@
-package com.example.myapplication
+package com.example.myapplication.view.customViewGroups
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.ViewGroup
 import androidx.core.view.marginBottom
 import androidx.core.view.marginLeft
@@ -26,16 +27,17 @@ class FlexBoxLayout @JvmOverloads constructor(
         for (i in 0 until childCount) {
             val child = getChildAt(i)
 
+            Log.d(
+                "TAG",
+                "onMeasure() called with: child $child at index $i"
+            )
+
             measureChildWithMargins(child, widthMeasureSpec, 0, heightMeasureSpec, 0)
             totalWidth += child.measuredWidth + child.marginLeft + child.marginRight
 
             if (totalWidth + paddingLeft + paddingRight > MeasureSpec.getSize(widthMeasureSpec)) {
 
-                if (totalHeight + child.measuredHeight +
-                    child.marginTop + child.marginBottom <= MeasureSpec.getSize(heightMeasureSpec)
-                ) {
-                    totalHeight += child.measuredHeight + child.marginTop + child.marginBottom
-                }
+                totalHeight += child.measuredHeight + child.marginTop + child.marginBottom
 
                 currentWidth =
                     maxOf(
@@ -74,8 +76,17 @@ class FlexBoxLayout @JvmOverloads constructor(
         val rightBound = width - paddingRight
         val bottomBound = height - paddingBottom
 
+        Log.d(
+            "FlexBox",
+            "onLayout() called with: changed = $changed, l = $l, t = $t, r = $r, b = $b childs $childCount"
+        )
+
         for (i in 0 until childCount) {
             val child = getChildAt(i)
+            Log.d(
+                "TAG",
+                "onLayout() called with: child $child at index $i and child count $childCount"
+            )
 
             when {
                 childLeft + child.marginLeft + child.measuredWidth + child.marginRight <= rightBound -> {
@@ -100,6 +111,7 @@ class FlexBoxLayout @JvmOverloads constructor(
                         currentTop += child.measuredHeight + child.marginTop + child.marginBottom
                     } else {
                         removeViewAt(childCount - 2)
+                        return
                     }
                 }
             }

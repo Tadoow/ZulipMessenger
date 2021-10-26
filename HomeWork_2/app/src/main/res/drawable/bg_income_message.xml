@@ -4,7 +4,6 @@
         <shape>
             <solid android:color="@color/customSmileUnselected" />
             <corners android:radius="18dp" />
-            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
         </shape>
     </item>
 </selector>
