@@ -6,15 +6,15 @@
     android:padding="8dp">
 
     <View
-        android:layout_width="70dp"
-        android:layout_height="8dp"
+        android:layout_width="62dp"
+        android:layout_height="7dp"
         android:layout_gravity="center|top"
         android:background="@drawable/top_shape_bottom_sheet" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/emojiRecyclerView"
+        android:id="@+id/emoji_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="18dp" />
+        android:layout_marginTop="25dp" />
 
 </LinearLayout>

@@ -2,14 +2,14 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
-            <solid android:color="@color/customSmileUnselected" />
-            <corners android:radius="14dp" />
+            <solid android:color="@color/light_black_2" />
+            <corners android:radius="10dp" />
             <padding
-                android:bottom="6dp"
-                android:left="14dp"
-                android:right="14dp"
-                android:top="6dp" />
+                android:bottom="8dp"
+                android:left="16dp"
+                android:right="16dp"
+                android:top="8dp" />
         </shape>
     </item>
-    <item android:drawable="@drawable/ic_baseline_add_24" />
+    <item android:drawable="@drawable/ic_plus" />
 </layer-list>

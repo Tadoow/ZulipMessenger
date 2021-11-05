@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="CustomSmileView">
-        <attr name="customSmileSrc" format="string" />
-        <attr name="customSmileCount" format="integer" />
+    <declare-styleable name="ReactionView">
+        <attr name="reactionSrc" format="string" />
+        <attr name="reactionCount" format="integer" />
     </declare-styleable>
 </resources>
