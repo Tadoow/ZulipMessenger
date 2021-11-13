@@ -40,7 +40,7 @@
 
     </LinearLayout>
 
-    <com.example.myapplication.presentation.view.customViewGroups.FlexBoxLayout
+    <com.example.myapplication.ui.chat.customViewGroup.FlexBoxLayout
         android:id="@+id/flexBoxLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -54,6 +54,6 @@
             android:clickable="true"
             android:focusable="true" />
 
-    </com.example.myapplication.presentation.view.customViewGroups.FlexBoxLayout>
+    </com.example.myapplication.ui.chat.customViewGroup.FlexBoxLayout>
 
 </merge>

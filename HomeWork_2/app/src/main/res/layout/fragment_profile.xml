@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/user_profile" />
+    <include
+        layout="@layout/user_profile" />
 
     <TextView
         android:id="@+id/log_out_button"
