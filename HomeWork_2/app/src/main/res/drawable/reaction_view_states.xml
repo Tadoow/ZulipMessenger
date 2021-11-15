@@ -2,14 +2,14 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_selected="true">
         <shape>
-            <solid android:color="@color/customSmileSelected" />
-            <corners android:radius="14dp" />
+            <solid android:color="@color/medium_gray" />
+            <corners android:radius="10dp" />
         </shape>
     </item>
     <item>
         <shape>
-            <solid android:color="@color/customSmileUnselected" />
-            <corners android:radius="14dp" />
+            <solid android:color="@color/light_black_2" />
+            <corners android:radius="10dp" />
         </shape>
     </item>
 </selector>

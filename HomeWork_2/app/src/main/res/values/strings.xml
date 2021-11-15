@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="customSmile">\uD83D\uDE39</string>
+    <string name="app_name">Better Than Slack</string>
+    <string name="emoji">\uD83D\uDE39</string>
     <string name="test_message">Привет! lorem ipsum test message dalshe zabil</string>
     <string name="user_name">Darrell Steward</string>
+    <string name="user_online">online</string>
+    <string name="user_offline">offline</string>
+    <string name="messages_count">%1$s mes</string>
 </resources>

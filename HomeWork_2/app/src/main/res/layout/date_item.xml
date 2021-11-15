@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp">
+
+    <TextView
+        android:id="@+id/date_item_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_date_item"
+        android:paddingLeft="19dp"
+        android:paddingTop="2dp"
+        android:paddingRight="19dp"
+        android:paddingBottom="3dp"
+        android:text="31 Янв"
+        android:textColor="@color/light_gray_1"
+        android:textSize="14sp" />
+
+</FrameLayout>

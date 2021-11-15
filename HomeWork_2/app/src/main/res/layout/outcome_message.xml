@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="12dp">
+    android:layout_marginTop="19dp"
+    android:layout_marginRight="12dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -13,38 +14,36 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/messageTextView"
+            android:id="@+id/message_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="@drawable/bg_outcome_message"
-            android:maxWidth="250dp"
-            android:paddingLeft="18dp"
+            android:maxWidth="230dp"
+            android:paddingLeft="16dp"
             android:paddingTop="10dp"
-            android:paddingRight="18dp"
+            android:paddingRight="16dp"
             android:paddingBottom="10dp"
             android:text="@string/test_message"
-            android:textColor="@color/light_white"
-            android:textSize="18sp" />
+            android:textColor="@color/heavy_white"
+            android:textSize="16sp" />
 
-        <com.example.myapplication.view.customViewGroups.FlexBoxLayout
+        <com.example.myapplication.ui.chat.customViewGroup.FlexBoxLayout
             android:id="@+id/flexBoxLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="4dp">
+            android:layout_gravity="right">
 
             <ImageView
-                android:id="@+id/reactionAddView"
+                android:id="@+id/reaction_add_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginTop="7dp"
                 android:background="@drawable/add_reaction_view"
                 android:clickable="true"
                 android:focusable="true" />
 
-        </com.example.myapplication.view.customViewGroups.FlexBoxLayout>
+        </com.example.myapplication.ui.chat.customViewGroup.FlexBoxLayout>
 
     </LinearLayout>
 
