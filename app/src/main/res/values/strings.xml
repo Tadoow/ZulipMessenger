@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Better Than Slack</string>
+    <string name="emoji">\uD83D\uDE39</string>
+    <string name="test_message">Привет! lorem ipsum test message dalshe zabil</string>
+    <string name="user_name">Darrell Steward</string>
+    <string name="stream_name">#%1$s</string>
+    <string name="user_active_status">active</string>
+    <string name="user_idle_status">idle</string>
+    <string name="user_offline_status">offline</string>
+</resources>
